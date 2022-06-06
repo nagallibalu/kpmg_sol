@@ -1,0 +1,16 @@
+Challenge #1
+
+A 3-tier environment is a common setup. Use a tool of your choosing/familiarity create these resources. Please remember we will not be judged on the outcome but more focusing on the approach, style and reproducibility.
+ 
+Solution:
+
+Instead of choosing convention way of hosting 3 tier application using web server , RDS and LoadBalancer.I have used serverless services for hosting this.
+This approach is cost efficient.
+
+ i. Front end : For front end, I am using api gateway
+ ii. APplication End: Hosted sample python code 
+ iii. Created s3 bucket to store the output of Lambda
+ 
+ Frontend(Api Gateway) will trigger Lambda where our application is hosted. Lambda have logic to copy a file from one s3 bucket to another.
+ Finally data layer is nothing but s3.
+
